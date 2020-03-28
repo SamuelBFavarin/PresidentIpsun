@@ -1,0 +1,66 @@
+<template>
+  <v-app id="inspire">
+
+    <!-- LEFT BAR-->
+    <v-navigation-drawer v-model="drawer" app clipped>
+      <v-list dense>
+        
+        <v-list>
+          <v-list-item
+            v-for="item in data"
+            :key="item.text"
+            link
+          >
+            <v-list-item-avatar>
+              <img
+                :src="item.picture"
+                alt=""
+              >
+            </v-list-item-avatar>
+            <v-list-item-title v-text="item.text" />
+          </v-list-item>
+        </v-list>
+
+      </v-list>
+    </v-navigation-drawer>
+
+    <!-- TOP BAR-->
+    <v-app-bar app clipped-left>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-icon>mdi-account</v-icon>
+      <v-toolbar-title>President Ipsun</v-toolbar-title>
+    </v-app-bar>
+
+    <!-- CONTENT -->
+    <router-view/>
+
+    <!--COPY BAR-->
+    <v-footer app>
+      <span>&copy; 2020</span>
+    </v-footer>
+
+  </v-app>
+
+
+</template>
+
+<script>
+  export default {
+    props: {
+      source: String,
+    },
+    data: () => ({
+      drawer: null,
+      data: [
+        { picture: 'https://pbs.twimg.com/profile_images/691046991325827072/oQv290pS.jpg', text: 'Trump' },
+        { picture: 'https://jornalpresidenteshow20oprimir.files.wordpress.com/2016/03/bolsonaro_rodolfostuckert_abr.jpg?w=256&h=256&crop=1', text: 'Bolsonaro' },
+        { picture: 'https://pbs.twimg.com/profile_images/3662988939/1f30a323c41f5ba25616408aea9b0277.png', text: 'Obama' },
+        { picture: 'https://c-sf.smule.com/sf/s63/arr/77/1b/86e8cea5-edad-4798-bca1-b065d8d53010_256.jpg', text: 'Dilma' },
+        { picture: 'https://pbs.twimg.com/profile_images/741029346203344897/T0mC9cCe_400x400.jpg', text: 'Lula' },
+      ],
+    }),
+    created () {
+      this.$vuetify.theme.dark = true
+    },
+  }
+</script>
