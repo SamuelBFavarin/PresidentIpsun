@@ -3,7 +3,9 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import VueRouter from 'vue-router'
 import routes from './routes';
-
+import VueClipboard from 'vue-clipboard2'
+ 
+Vue.use(VueClipboard)
 
 Vue.use(VueRouter)
 const router = new VueRouter({routes});
