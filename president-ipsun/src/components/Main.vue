@@ -29,6 +29,14 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-icon>mdi-account</v-icon>
       <v-toolbar-title>President Ipsun</v-toolbar-title>
+      
+      <v-spacer />
+      <div class="my-2" right="true">
+        <v-btn @click="openLink()" color="warning" dark>
+          <v-icon>mdi-coffee</v-icon>  Pay me a coffee
+        </v-btn>
+      </div>
+
     </v-app-bar>
 
     <!-- CONTENT -->
@@ -62,5 +70,12 @@
     created () {
       this.$vuetify.theme.dark = true
     },
+
+    methods: {
+      openLink() {
+        let url = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Q4VYXS5DVL5KC&currency_code=BRL&source=url'
+        window.open( url, "_blank"); 
+      }
+    }
   }
 </script>
