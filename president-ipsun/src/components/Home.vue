@@ -143,6 +143,16 @@ export default {
         status: true,
         height: 750,
         width: 200
+      },
+      {
+        person: "Dilma",
+        description:"A lua é muito mais importante que o sol, porque ela aparece a noite, quando está tudo escuro. Já o sol, aparece de dia quando já está tudo claro, ou seja, não tem utilidade nenhuma.",
+        photo: "https://c-sf.smule.com/sf/s63/arr/77/1b/86e8cea5-edad-4798-bca1-b065d8d53010_256.jpg",
+        path: "/dilma",
+        color: "#921313",
+        status: true,
+        height: 750,
+        width: 200
       }
 
       //{ picture: 'https://pbs.twimg.com/profile_images/691046991325827072/oQv290pS.jpg', text: 'Trump' },
