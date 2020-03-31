@@ -6,9 +6,19 @@
       <v-list dense>
         
         <v-list>
+          
+          <v-list-item @click="filterByPresident()" link>
+            <v-list-item-avatar>
+              <v-icon>mdi-home</v-icon>
+            </v-list-item-avatar>
+            <v-list-item-title v-text="'Home'" />
+          </v-list-item>
+
+
           <v-list-item
             v-for="item in data"
             :key="item.text"
+            @click="filterByPresident(item.text)"
             link
           >
             <v-list-item-avatar>
@@ -19,6 +29,8 @@
             </v-list-item-avatar>
             <v-list-item-title v-text="item.text" />
           </v-list-item>
+
+
         </v-list>
 
       </v-list>
@@ -59,7 +71,7 @@
     },
     data: () => ({
       drawer: null,
-      data: [
+      data: [        
         { picture: 'https://pbs.twimg.com/profile_images/691046991325827072/oQv290pS.jpg', text: 'Trump' },
         { picture: 'https://jornalpresidenteshow20oprimir.files.wordpress.com/2016/03/bolsonaro_rodolfostuckert_abr.jpg?w=256&h=256&crop=1', text: 'Bolsonaro' },
         { picture: 'https://pbs.twimg.com/profile_images/3662988939/1f30a323c41f5ba25616408aea9b0277.png', text: 'Obama' },
@@ -75,6 +87,16 @@
       openLink() {
         let url = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Q4VYXS5DVL5KC&currency_code=BRL&source=url'
         window.open( url, "_blank"); 
+      },
+
+      filterByPresident(president=null) {
+        if (president) {
+          this.$router.push({ path: '', query: { president: president }})
+        } 
+
+        else {
+          this.$router.push({ path: '' })
+        }
       }
     }
   }

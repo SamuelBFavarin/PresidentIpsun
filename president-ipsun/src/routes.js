@@ -1,10 +1,14 @@
 import Home from './components/Home.vue';
-import Test from './components/Test.vue';
 
 
 const routes = [
     { path: '/', component: Home },
-    { path: '/test', component: Test }
+    { path: '/Bolsonaro', component: Home },
+    { path: '/Dilma', component: Home },
+    { path: '/Lula', component: Home },
+    { path: '/Obama', component: Home },
+    { path: '/Trump', component: Home }
+
 ];
 
 export default routes;

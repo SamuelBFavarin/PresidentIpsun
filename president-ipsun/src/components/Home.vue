@@ -1,7 +1,8 @@
 <template>
   <v-container fluid>
+
     <waterfall :gutterWidth="10" :gutterHeight="10">
-      <WaterfallItem :width="350" v-for="(card, index) in cards" :key="index">
+      <WaterfallItem :width="350" v-for="(card, index) in messages" :key="index">
         <v-card :color="card.color" dark>
           <v-card-title>
             <v-icon large left>mdi-message-text</v-icon>
@@ -29,6 +30,8 @@
             </v-list-item>
           </v-card-actions>
         </v-card>
+
+
       </WaterfallItem>
     </waterfall>
 
@@ -81,6 +84,7 @@ export default {
     selectMessage: '',
     snackbarSuccess: false,
     snackbarError: false,
+    presidentFilter: null,
     cards: [
       {
         person: "Bolsonaro",
@@ -321,10 +325,11 @@ export default {
     ]
   }),
 
+  beforeMount() {
+    this.presidentFilter = this.$route.query.president
+  },
+
   methods: {
-    setPath(path) {
-      this.$router.push({ path: path });
-    },
 
     doCopy(message) {
         let _this = this
@@ -337,7 +342,37 @@ export default {
             _this.snackbarError = true
         })
     }
+  },
+
+  watch: {
+    $route(to, from) {
+      // do nothing
+      console.log(from)             
+      this.presidentFilter = to.query.president      
+    }
+  },
+
+  computed: {
+
+     messages: function() {
+      let _this = this
+
+      if (_this.presidentFilter) {
+        return _this.cards.filter(function(p) {
+          return p.person == _this.presidentFilter
+        })
+      }
+
+      else {
+        return _this.cards
+      }
+
+     }
+   
   }
+  
+  
+
 };
 </script>
 
