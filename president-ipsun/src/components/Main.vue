@@ -14,6 +14,8 @@
             <v-list-item-title v-text="'Home'" />
           </v-list-item>
 
+          <v-divider :inset="inset"></v-divider>
+
 
           <v-list-item
             v-for="item in data"
@@ -32,6 +34,21 @@
 
 
         </v-list>
+
+        <v-divider :inset="inset"></v-divider>
+
+        <v-list> 
+          <v-list-item @click="$router.push({ path: 'tool' })" link>
+
+            <v-list-item-avatar>
+              <v-icon>mdi-hexagon-multiple</v-icon>
+            </v-list-item-avatar>
+            <v-list-item-title v-text="'President Ipsun Tool'" />
+          </v-list-item>
+
+             
+        </v-list>
+
 
       </v-list>
     </v-navigation-drawer>
@@ -91,11 +108,11 @@
 
       filterByPresident(president=null) {
         if (president) {
-          this.$router.push({ path: '', query: { president: president }})
+          this.$router.push({ path: '/', query: { president: president }})
         } 
 
         else {
-          this.$router.push({ path: '' })
+          this.$router.push({ path: '/' })
         }
       }
     }
