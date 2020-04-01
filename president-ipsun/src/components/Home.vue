@@ -1,6 +1,5 @@
 <template>
   <v-container fluid>
-
     <waterfall :gutterWidth="10" :gutterHeight="10">
       <WaterfallItem :width="350" v-for="(card, index) in messages" :key="index">
         <v-card :color="card.color" dark>
@@ -26,50 +25,27 @@
                   <v-icon class="mr-1" @click="doCopy(card.description)">mdi-content-copy</v-icon>
                 </v-card-actions>
               </v-row>
-
             </v-list-item>
           </v-card-actions>
         </v-card>
-
-
       </WaterfallItem>
     </waterfall>
 
-    <v-snackbar
-      v-model="snackbarSuccess"
-      :timeout="1500"
-    >
+    <v-snackbar v-model="snackbarSuccess" :timeout="1500">
       Message Copied!
-      <v-btn
-        color="green"
-        text
-        @click="snackbarSuccess = false"
-      >
-        Close
-      </v-btn>
+      <v-btn color="green" text @click="snackbarSuccess = false">Close</v-btn>
     </v-snackbar>
 
-    <v-snackbar
-      v-model="snackbarError"
-      :timeout="1500"
-      color="error"
-    >
+    <v-snackbar v-model="snackbarError" :timeout="1500" color="error">
       Error
-      <v-btn
-        color="black"
-        text
-        @click="snackbarSuccess = false"
-      >
-        Close
-      </v-btn>
+      <v-btn color="black" text @click="snackbarSuccess = false">Close</v-btn>
     </v-snackbar>
-
   </v-container>
 </template>
 
 
 <script>
-import {Waterfall, WaterfallItem} from 'vue2-waterfall';
+import { Waterfall, WaterfallItem } from "vue2-waterfall";
 
 export default {
   name: "Home",
@@ -81,7 +57,7 @@ export default {
 
   data: () => ({
     showLoading: false,
-    selectMessage: '',
+    selectMessage: "",
     snackbarSuccess: false,
     snackbarError: false,
     presidentFilter: null,
@@ -93,10 +69,7 @@ export default {
         photo:
           "https://jornalpresidenteshow20oprimir.files.wordpress.com/2016/03/bolsonaro_rodolfostuckert_abr.jpg?w=256&h=256&crop=1",
         path: "/bolsonaro",
-        color: "#0a4c5a",
-        status: true,
-        height: 750,
-        width: 200
+        color: "#0a4c5a"
       },
       {
         person: "Trump",
@@ -105,22 +78,16 @@ export default {
         photo:
           "https://pbs.twimg.com/profile_images/691046991325827072/oQv290pS.jpg",
         path: "/bolsonaro",
-        color: "#1d2627",
-        status: true,
-        height: 1000,
-        width: 500
+        color: "#1d2627"
       },
       {
         person: "Lula",
         description:
-        "O que me frustra não é o ódio que as pessoas estão vendendo ou tentando disseminar contra o PT. O que me assusta é um programa como o Bolsa Família ser tão odiado por uma elite que todo dia joga comida fora.",
+          "O que me frustra não é o ódio que as pessoas estão vendendo ou tentando disseminar contra o PT. O que me assusta é um programa como o Bolsa Família ser tão odiado por uma elite que todo dia joga comida fora.",
         photo:
           "https://pbs.twimg.com/profile_images/741029346203344897/T0mC9cCe_400x400.jpg",
         path: "/bolsonaro",
-        color: "#1e420c",
-        status: true,
-        height: 1000,
-        width: 500
+        color: "#1e420c"
       },
       {
         person: "Dilma",
@@ -129,27 +96,21 @@ export default {
         photo:
           "https://c-sf.smule.com/sf/s63/arr/77/1b/86e8cea5-edad-4798-bca1-b065d8d53010_256.jpg",
         path: "/bolsonaro",
-        color: "#921313",
-        status: true,
-        height: 750,
-        width: 200
+        color: "#921313"
       },
       {
         person: "Obama",
         description:
-            "Now, as a nation, we don't promise equal outcomes, but we were founded on the idea everybody should have an equal opportunity to succeed. No matter who you are, what you look like, where you come from, you can make it. That's an essential promise of America. Where you start should not determine where you end up.",
+          "Now, as a nation, we don't promise equal outcomes, but we were founded on the idea everybody should have an equal opportunity to succeed. No matter who you are, what you look like, where you come from, you can make it. That's an essential promise of America. Where you start should not determine where you end up.",
         photo:
           "https://pbs.twimg.com/profile_images/3662988939/1f30a323c41f5ba25616408aea9b0277.png",
         path: "/bolsonaro",
-        color: "#44380c",
-        status: true,
-        height: 750,
-        width: 200
+        color: "#44380c"
       },
       {
         person: "Bolsonaro",
         description:
-        "Tem que mudar a política de direitos humanos. Os direitos humanos são para humanos direitos e não para vagabundo e marginais que vivem nas costas do governo.",
+          "Tem que mudar a política de direitos humanos. Os direitos humanos são para humanos direitos e não para vagabundo e marginais que vivem nas costas do governo.",
         photo:
           "https://jornalpresidenteshow20oprimir.files.wordpress.com/2016/03/bolsonaro_rodolfostuckert_abr.jpg?w=256&h=256&crop=1",
         path: "/bolsonaro",
@@ -158,7 +119,7 @@ export default {
         height: 750,
         width: 200
       },
-       {
+      {
         key: 6,
         person: "Bolsonaro",
         description:
@@ -188,7 +149,7 @@ export default {
         key: 8,
         person: "Lula",
         description:
-        "Precisa entender que democracia é a convivência da diversidade. Não quero que quem votou no Aécio goste de mim. Eu quero que a gente aprenda a conviver de forma civilizada com as nossas diferenças.",
+          "Precisa entender que democracia é a convivência da diversidade. Não quero que quem votou no Aécio goste de mim. Eu quero que a gente aprenda a conviver de forma civilizada com as nossas diferenças.",
         photo:
           "https://pbs.twimg.com/profile_images/741029346203344897/T0mC9cCe_400x400.jpg",
         path: "/bolsonaro",
@@ -214,7 +175,7 @@ export default {
         key: 10,
         person: "Obama",
         description:
-            "Where the stakes are the highest, in the war on terror, we cannot possibly succeed without extraordinary international cooperation. Effective international police actions require the highest degree of intelligence sharing, planning and collaborative enforcement.",
+          "Where the stakes are the highest, in the war on terror, we cannot possibly succeed without extraordinary international cooperation. Effective international police actions require the highest degree of intelligence sharing, planning and collaborative enforcement.",
         photo:
           "https://pbs.twimg.com/profile_images/3662988939/1f30a323c41f5ba25616408aea9b0277.png",
         path: "/bolsonaro",
@@ -227,7 +188,7 @@ export default {
         key: 11,
         person: "Bolsonaro",
         description:
-        "Tem que mudar a política de direitos humanos. Os direitos humanos são para humanos direitos e não para vagabundo e marginais que vivem nas costas do governo.",
+          "Tem que mudar a política de direitos humanos. Os direitos humanos são para humanos direitos e não para vagabundo e marginais que vivem nas costas do governo.",
         photo:
           "https://jornalpresidenteshow20oprimir.files.wordpress.com/2016/03/bolsonaro_rodolfostuckert_abr.jpg?w=256&h=256&crop=1",
         path: "/bolsonaro",
@@ -236,7 +197,7 @@ export default {
         height: 750,
         width: 200
       },
-            {
+      {
         key: 7,
         person: "Trump",
         description:
@@ -253,7 +214,7 @@ export default {
         key: 8,
         person: "Lula",
         description:
-        "Precisa entender que democracia é a convivência da diversidade. Não quero que quem votou no Aécio goste de mim. Eu quero que a gente aprenda a conviver de forma civilizada com as nossas diferenças.",
+          "Precisa entender que democracia é a convivência da diversidade. Não quero que quem votou no Aécio goste de mim. Eu quero que a gente aprenda a conviver de forma civilizada com as nossas diferenças.",
         photo:
           "https://pbs.twimg.com/profile_images/741029346203344897/T0mC9cCe_400x400.jpg",
         path: "/bolsonaro",
@@ -279,7 +240,7 @@ export default {
         key: 10,
         person: "Obama",
         description:
-            "Where the stakes are the highest, in the war on terror, we cannot possibly succeed without extraordinary international cooperation. Effective international police actions require the highest degree of intelligence sharing, planning and collaborative enforcement.",
+          "Where the stakes are the highest, in the war on terror, we cannot possibly succeed without extraordinary international cooperation. Effective international police actions require the highest degree of intelligence sharing, planning and collaborative enforcement.",
         photo:
           "https://pbs.twimg.com/profile_images/3662988939/1f30a323c41f5ba25616408aea9b0277.png",
         path: "/bolsonaro",
@@ -292,7 +253,7 @@ export default {
         key: 11,
         person: "Bolsonaro",
         description:
-        "Tem que mudar a política de direitos humanos. Os direitos humanos são para humanos direitos e não para vagabundo e marginais que vivem nas costas do governo.",
+          "Tem que mudar a política de direitos humanos. Os direitos humanos são para humanos direitos e não para vagabundo e marginais que vivem nas costas do governo.",
         photo:
           "https://jornalpresidenteshow20oprimir.files.wordpress.com/2016/03/bolsonaro_rodolfostuckert_abr.jpg?w=256&h=256&crop=1",
         path: "/bolsonaro",
@@ -303,8 +264,10 @@ export default {
       },
       {
         person: "Dilma",
-        description:"Ei vi. Você, veja... Eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.",
-        photo: "https://c-sf.smule.com/sf/s63/arr/77/1b/86e8cea5-edad-4798-bca1-b065d8d53010_256.jpg",
+        description:
+          "Ei vi. Você, veja... Eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.",
+        photo:
+          "https://c-sf.smule.com/sf/s63/arr/77/1b/86e8cea5-edad-4798-bca1-b065d8d53010_256.jpg",
         path: "/dilma",
         color: "#921313",
         status: true,
@@ -313,66 +276,60 @@ export default {
       },
       {
         person: "Dilma",
-        description:"A lua é muito mais importante que o sol, porque ela aparece a noite, quando está tudo escuro. Já o sol, aparece de dia quando já está tudo claro, ou seja, não tem utilidade nenhuma.",
-        photo: "https://c-sf.smule.com/sf/s63/arr/77/1b/86e8cea5-edad-4798-bca1-b065d8d53010_256.jpg",
+        description:
+          "A lua é muito mais importante que o sol, porque ela aparece a noite, quando está tudo escuro. Já o sol, aparece de dia quando já está tudo claro, ou seja, não tem utilidade nenhuma.",
+        photo:
+          "https://c-sf.smule.com/sf/s63/arr/77/1b/86e8cea5-edad-4798-bca1-b065d8d53010_256.jpg",
         path: "/dilma",
         color: "#921313",
         status: true,
         height: 750,
         width: 200
       }
-
     ]
   }),
 
   beforeMount() {
-    this.presidentFilter = this.$route.query.president
+    this.presidentFilter = this.$route.query.president;
   },
 
   methods: {
-
     doCopy(message) {
-        let _this = this
-        this.selectMessage = message
+      let _this = this;
+      this.selectMessage = message;
 
-        this.$copyText(this.selectMessage).then(function () {
-            _this.snackbarSuccess = true
-
-        }, function () {
-            _this.snackbarError = true
-        })
+      this.$copyText(this.selectMessage).then(
+        function() {
+          _this.snackbarSuccess = true;
+        },
+        function() {
+          _this.snackbarError = true;
+        }
+      );
     }
   },
 
   watch: {
     $route(to, from) {
       // do nothing
-      console.log(from)             
-      this.presidentFilter = to.query.president      
+      console.log(from);
+      this.presidentFilter = to.query.president;
     }
   },
 
   computed: {
-
-     messages: function() {
-      let _this = this
+    messages: function() {
+      let _this = this;
 
       if (_this.presidentFilter) {
         return _this.cards.filter(function(p) {
-          return p.person == _this.presidentFilter
-        })
+          return p.person == _this.presidentFilter;
+        });
+      } else {
+        return _this.cards;
       }
-
-      else {
-        return _this.cards
-      }
-
-     }
-   
+    }
   }
-  
-  
-
 };
 </script>
 
