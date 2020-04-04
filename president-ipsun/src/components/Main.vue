@@ -11,22 +11,22 @@
             <v-list-item-title v-text="'Home'" />
           </v-list-item>
 
-          <v-divider :inset="inset"></v-divider>
+          <v-divider></v-divider>
 
           <v-list-item
-            v-for="item in data"
-            :key="item.text"
-            @click="filterByPresident(item.text)"
+            v-for="item in presidentData"
+            :key="item.name"
+            @click="filterByPresident(item.name)"
             link
           >
             <v-list-item-avatar>
-              <img :src="item.picture" alt />
+              <img :src="item.photo" alt />
             </v-list-item-avatar>
-            <v-list-item-title v-text="item.text" />
+            <v-list-item-title v-text="item.name" />
           </v-list-item>
         </v-list>
 
-        <v-divider :inset="inset"></v-divider>
+        <v-divider></v-divider>
 
         <v-list>
           <v-list-item @click="$router.push({ path: 'tool' })" link>
@@ -46,7 +46,7 @@
 
       <v-spacer />
       <div class="my-2" right="true">
-        <v-btn @click="openLink()" color="warning" dark>
+        <v-btn @click="openPayPalLink()" color="warning" dark>
           <v-icon>mdi-coffee</v-icon>Pay me a coffee
         </v-btn>
       </div>
@@ -63,46 +63,22 @@
 </template>
 
 <script>
+import json from "../json/president.json";
+
 export default {
   props: {
     source: String
   },
   data: () => ({
     drawer: null,
-    data: [
-      {
-        picture:
-          "https://pbs.twimg.com/profile_images/691046991325827072/oQv290pS.jpg",
-        text: "Trump"
-      },
-      {
-        picture:
-          "https://jornalpresidenteshow20oprimir.files.wordpress.com/2016/03/bolsonaro_rodolfostuckert_abr.jpg?w=256&h=256&crop=1",
-        text: "Bolsonaro"
-      },
-      {
-        picture:
-          "https://pbs.twimg.com/profile_images/3662988939/1f30a323c41f5ba25616408aea9b0277.png",
-        text: "Obama"
-      },
-      {
-        picture:
-          "https://c-sf.smule.com/sf/s63/arr/77/1b/86e8cea5-edad-4798-bca1-b065d8d53010_256.jpg",
-        text: "Dilma"
-      },
-      {
-        picture:
-          "https://pbs.twimg.com/profile_images/741029346203344897/T0mC9cCe_400x400.jpg",
-        text: "Lula"
-      }
-    ]
+    presidentData: json
   }),
   created() {
     this.$vuetify.theme.dark = true;
   },
 
   methods: {
-    openLink() {
+    openPayPalLink() {
       let url =
         "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Q4VYXS5DVL5KC&currency_code=BRL&source=url";
       window.open(url, "_blank");
