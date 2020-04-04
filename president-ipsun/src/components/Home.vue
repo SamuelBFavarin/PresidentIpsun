@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <waterfall :gutterWidth="10" :gutterHeight="10">
-      <WaterfallItem :width="350" v-for="(card, index) in messages" :key="index">
+      <WaterfallItem :width="300" v-for="(card, index) in messages" :key="index">
         <v-card :color="card.color" dark>
           <v-card-title>
             <v-icon large left>mdi-message-text</v-icon>

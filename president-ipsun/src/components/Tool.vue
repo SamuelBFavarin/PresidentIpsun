@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-card class="mx-auto" max-width="1200">
       <v-container>
         <div>Build your</div>

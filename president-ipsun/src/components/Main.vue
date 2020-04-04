@@ -81,7 +81,7 @@ export default {
   methods: {
     openPayPalLink() {
       let url =
-        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Q4VYXS5DVL5KC&currency_code=BRL&source=url";
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Q4VYXS5DVL5KC&item_name=To+buy+a+coffee&currency_code=USD&source=url";
       window.open(url, "_blank");
     },
 
