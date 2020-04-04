@@ -87,7 +87,8 @@ export default {
     },
 
     adjustDataToComponet(presidentData) {
-      let _this = this;
+      let aux_card = [];
+      // set president datas
       presidentData.forEach(president => {
         president["text"].forEach(text => {
           let item = {
@@ -98,11 +99,30 @@ export default {
             color: president["color"]
           };
 
-          _this.cards.push(item);
+          aux_card.push(item);
         });
       });
 
-      this.cards = this.shuffle(this.cards);
+      // shuffle the cards
+      aux_card = this.shuffle(aux_card);
+
+      // add adsense cards
+
+      let add = {
+        person: "add",
+        description: "this is a add man",
+        photo: "",
+        path: "",
+        color: "#FFF"
+      };
+
+      for (var i = 0; i < aux_card.length; i++) {
+        this.cards.push(aux_card[i]);
+
+        if ((i + 1) % 5 == 0) {
+          this.cards.push(add);
+        }
+      }
     },
 
     shuffle(array) {
