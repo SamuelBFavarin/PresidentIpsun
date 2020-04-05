@@ -3,7 +3,7 @@
         "name": "Bolsonaro",
         "alias": "bolsonaro",
         "path": "/bolsonaro",
-        "photo": "127.0.0.1:8080/src/assets/bolsonaro.jpg",
+        "photo": "assets/bolsonaro.jpg",
         "color": "#0a4c5a",
         "text": [
             "Quando um moleque de 9 ou 10 anos vai trabalhar em algum lugar, tá cheio de gente aí: 'trabalho escravo, não sei o quê, trabalho infantil...'. Agora, quando tá fumando um paralelepípedo de crack, ninguém fala nada. Então, o trabalho não atrapalha a vida de ninguém.",
@@ -25,7 +25,7 @@
     {
         "name": "Trump",
         "alias": "trump",
-        "photo": "127.0.0.1:8080/src/assets/trump.jpg",
+        "photo": "assets/trump.jpg",
         "path": "/trump",
         "color": "#1d2627",
         "text": [
@@ -49,7 +49,7 @@
     {
         "name": "Lula",
         "alias": "lula",
-        "photo": "127.0.0.1:8080/src/assets/lula.jpg",
+        "photo": "assets/lula.jpg",
         "path": "/lula",
         "color": "#1e420c",
         "text": [
@@ -73,7 +73,7 @@
     {
         "name": "Dilma",
         "alias": "dilma",
-        "photo": "127.0.0.1:8080/src/assets/dilma.jpg",
+        "photo": "assets/dilma.jpg",
         "path": "/dilma",
         "color": "#921313",
         "text": [
@@ -94,7 +94,7 @@
     {
         "name": "Obama",
         "alias": "obama",
-        "photo": "127.0.0.1:8080/src/assets/obama.jpg",
+        "photo": "assets/obama.jpg",
         "path": "/obama",
         "color": "#44380c",
         "text": [
