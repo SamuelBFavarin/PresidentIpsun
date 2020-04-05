@@ -3,7 +3,7 @@
         "name": "Bolsonaro",
         "alias": "bolsonaro",
         "path": "/bolsonaro",
-        "photo": "https://jornalpresidenteshow20oprimir.files.wordpress.com/2016/03/bolsonaro_rodolfostuckert_abr.jpg?w=256&h=256&crop=1",
+        "photo": "127.0.0.1:8080/src/assets/bolsonaro.jpg",
         "color": "#0a4c5a",
         "text": [
             "Quando um moleque de 9 ou 10 anos vai trabalhar em algum lugar, tá cheio de gente aí: 'trabalho escravo, não sei o quê, trabalho infantil...'. Agora, quando tá fumando um paralelepípedo de crack, ninguém fala nada. Então, o trabalho não atrapalha a vida de ninguém.",
@@ -18,14 +18,14 @@
             "Ele devia ir comer um capim ali fora para manter as suas origens",
             "Quem usa cota, no meu entender, está assinando embaixo que é incompetente. Eu não entraria num avião pilotado por um cotista. Nem aceitaria ser operado por um médico cotista",
             "Se eu chegar lá, não vai ter dinheiro para ONG. Esses inúteis vão ter que trabalhar",
-            "É só uma gripezinha, ta ok?",
+            "É só uma gripezinha",
             "O que é Golden Shower?"
         ]
     },
     {
         "name": "Trump",
         "alias": "trump",
-        "photo": "https://pbs.twimg.com/profile_images/691046991325827072/oQv290pS.jpg",
+        "photo": "127.0.0.1:8080/src/assets/trump.jpg",
         "path": "/trump",
         "color": "#1d2627",
         "text": [
@@ -49,7 +49,7 @@
     {
         "name": "Lula",
         "alias": "lula",
-        "photo": "https://pbs.twimg.com/profile_images/741029346203344897/T0mC9cCe_400x400.jpg",
+        "photo": "127.0.0.1:8080/src/assets/lula.jpg",
         "path": "/lula",
         "color": "#1e420c",
         "text": [
@@ -73,7 +73,7 @@
     {
         "name": "Dilma",
         "alias": "dilma",
-        "photo": "https://c-sf.smule.com/sf/s63/arr/77/1b/86e8cea5-edad-4798-bca1-b065d8d53010_256.jpg",
+        "photo": "127.0.0.1:8080/src/assets/dilma.jpg",
         "path": "/dilma",
         "color": "#921313",
         "text": [
@@ -94,7 +94,7 @@
     {
         "name": "Obama",
         "alias": "obama",
-        "photo": "https://pbs.twimg.com/profile_images/3662988939/1f30a323c41f5ba25616408aea9b0277.png",
+        "photo": "127.0.0.1:8080/src/assets/obama.jpg",
         "path": "/obama",
         "color": "#44380c",
         "text": [
