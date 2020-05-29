@@ -38,11 +38,6 @@
         </v-list>
       </v-list>
       <v-divider></v-divider>
-      <v-list>
-        <v-img
-          src="https://macmagazine.uol.com.br/wp-content/uploads/2019/07/16-Google_AdSense.jpg"
-        ></v-img>
-      </v-list>
     </v-navigation-drawer>
 
     <!-- TOP BAR-->

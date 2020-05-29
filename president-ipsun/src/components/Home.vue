@@ -108,20 +108,20 @@ export default {
 
       // add adsense cards
 
-      let add = {
-        person: "add",
-        description: "this is a add man",
-        photo: "",
-        path: "",
-        color: "#FFF"
-      };
+      // let add = {
+      //   person: "add",
+      //   description: "this is a add man",
+      //   photo: "",
+      //   path: "",
+      //   color: "#FFF"
+      // };
 
       for (var i = 0; i < aux_card.length; i++) {
         this.cards.push(aux_card[i]);
 
-        if ((i + 1) % 5 == 0) {
-          this.cards.push(add);
-        }
+        // if ((i + 1) % 5 == 0) {
+        //   this.cards.push(add);
+        // }
       }
     },
 
