@@ -31,9 +31,9 @@
         <v-list>
           <v-list-item @click="$router.push({ path: 'tool' })" link>
             <v-list-item-avatar>
-              <v-icon>mdi-hexagon-multiple</v-icon>
+              <v-icon>mdi-hammer-screwdriver</v-icon>
             </v-list-item-avatar>
-            <v-list-item-title v-text="'President Ipsun Tool'" />
+            <v-list-item-title v-text="'Generate President Ipsun!'" />
           </v-list-item>
         </v-list>
       </v-list>
@@ -76,7 +76,7 @@ export default {
   methods: {
     openPayPalLink() {
       let url =
-        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Q4VYXS5DVL5KC&item_name=To+buy+a+coffee&currency_code=USD&source=url";
+        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=samuelbfavarin%40hotmail.com&item_name=Pay+me+a+coffee&currency_code=BRL&source=url";
       window.open(url, "_blank");
     },
 
