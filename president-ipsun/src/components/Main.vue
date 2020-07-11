@@ -33,7 +33,19 @@
             <v-list-item-avatar>
               <v-icon>mdi-hammer-screwdriver</v-icon>
             </v-list-item-avatar>
-            <v-list-item-title v-text="'Generate President Ipsun!'" />
+            <v-badge color="red" content="new" offset-x="25" offset-y="5">
+              <strong>
+                <v-list-item-title v-text="'Generate President Ipsum!'" />
+              </strong>
+            </v-badge>
+          </v-list-item>
+          <v-list-item @click="$router.push({ path: 'supporters' })" link>
+            <v-list-item-avatar>
+              <v-icon>mdi-coffee</v-icon>
+            </v-list-item-avatar>
+            <strong>
+              <v-list-item-title v-text="'Supporters!'" />
+            </strong>
           </v-list-item>
         </v-list>
       </v-list>
@@ -43,7 +55,9 @@
     <!-- TOP BAR-->
     <v-app-bar app clipped-left>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>President Ipsun</v-toolbar-title>
+      <v-toolbar-title v-if="!$vuetify.breakpoint.xsOnly">
+        <strong>President Ipsum</strong>
+      </v-toolbar-title>
 
       <v-spacer />
       <div class="my-2" right="true">
