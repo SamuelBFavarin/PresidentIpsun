@@ -61,7 +61,7 @@
 
       <v-spacer />
       <div class="my-2" right="true">
-        <v-btn @click="openPayPalLink()" color="warning" dark>
+        <v-btn @click="openBuyCoffeeLink()" color="warning" dark>
           <v-icon>mdi-coffee</v-icon>Pay me a coffee
         </v-btn>
       </div>
@@ -77,20 +77,19 @@ import json from "../json/president.json";
 
 export default {
   props: {
-    source: String
+    source: String,
   },
   data: () => ({
     drawer: null,
-    presidentData: json
+    presidentData: json,
   }),
   created() {
     this.$vuetify.theme.dark = true;
   },
 
   methods: {
-    openPayPalLink() {
-      let url =
-        "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=samuelbfavarin%40hotmail.com&item_name=Pay+me+a+coffee&currency_code=BRL&source=url";
+    openBuyCoffeeLink() {
+      let url = "https://www.buymeacoffee.com/SamuelFavarin";
       window.open(url, "_blank");
     },
 
@@ -100,7 +99,7 @@ export default {
       } else {
         this.$router.push({ path: "/" });
       }
-    }
-  }
+    },
+  },
 };
 </script>
